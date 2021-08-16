@@ -1,0 +1,131 @@
+    //-------------start mixin mix_header-------
+
+ @mixin mix_header {
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: #fff;
+        @include size_549 {
+            height: 12vh;
+            background-color: #000;
+        }
+    }
+    
+    .top_block {
+        width: 100%;
+        height: 70%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        //border: 1px solid rgb(10, 139, 10);
+    }
+    
+    .logo2 {
+        width: 12%;
+        height: 100%;
+        box-sizing: border-box;
+        padding-top: 0.7%;
+        padding-left: 3%;
+        border: 1px solid rgb(155, 22, 104);
+        @include size_549 {
+            width: 12.9%;
+        }
+    }
+    
+    .img_logo2 {
+        width: 90%;
+        height: 80%;
+        // max-width: 115px;
+        //  max-height: 80%;
+        
+    }
+    
+    .name_site {
+        width: 60%;
+        border: 1px solid rgb(255, 0, 0);
+        @include size_650_930 {
+            width: 50%;
+        }
+        @include size_550_649 {
+            width: 50%;
+        }
+        @include size_549 {
+            width: 65%;
+        }
+    }
+    
+    .name_site p {
+        font-family: 'Segoe Script';
+        font-size: 1.9em;
+        
+        text-align: center;
+        margin: 2% 19% 2% 19%;
+        padding: 1.3% 2% 1.3% 2%;
+        border: 2px solid #fff;
+        border-radius: 0.6em;
+        background-color: #361d1d;
+        @include size_650_930 {
+            font-size: 1.2em;
+        }
+        @include size_550_649 {
+            font-size: 1.0em;
+        }
+        @include size_549 {
+            font-size: 1.0em;
+            border-radius: 1.2em;
+        }
+    }
+    
+    .about_pr {
+        height: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+        letter-spacing: 0.3em;
+        //border: 2px solid #fff;
+        @include size_650_930 {
+            font-size: 1.2em;
+        }
+        @include size_549 {
+            font-size: 0.9em;
+        }
+    }
+       
+    .quote {
+        width: 26%;
+        height: 100%;
+        font-family: Cambria;
+        font-style: italic;
+        font-size: 1.3em;
+        line-height: 1.25em;
+        box-sizing: border-box;
+        padding: 0.9em 0.4em 0.5em 0.5em;
+        border: 1px solid rgb(69, 205, 223);
+        @include size_650_930 {
+            width: 30%;
+            font-size: 0.9em;
+        }
+        @include size_550_649 {
+            width: 33%;
+            font-size: 0.9em;
+            line-height: 1em;
+        }
+        @include size_549 {
+            display: none;
+        }
+    }
+
+    .wrapper_burger {
+        display: none;
+        @include size_549 {
+            display: block;
+            @include mob_burger();
+        }
+    }
+    
+}    
+   
+//-------------end mixin mix_header-------

@@ -1,0 +1,440 @@
+@import '_zeroing_styles';
+
+/*--------------------*/
+
+.page {
+    width: 100%;
+    height: 100%;
+    background: url("../img/bg_page1.jpg") 50% / contain repeat-x fixed;
+    //   border: 1px solid red;
+}
+
+.wrapper {
+    max-width: 1024px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: black;
+    //border: 1px solid aqua;
+}
+
+.wrapper_content {
+    width: 100%;
+    height: 83%;
+    //  border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+//--------------------
+.header {
+    width: 100%;
+    height: 18%;
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    //border: 1px solid green;
+}
+
+.logo2 {
+    width: 17%;
+    height: 100%;
+    //  border: 1px solid rgb(10, 139, 10);
+    box-sizing: border-box;
+    padding-top: 0.7%;
+    padding-left: 3%;
+}
+
+.img_logo2 {
+    width: 80%;
+    height: 80%;
+    // max-width: 115px;
+    //  max-height: 80%;
+}
+
+.center_block {
+    width: 57%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    //border: 1px solid rgb(10, 139, 10);
+}
+
+.name_site {
+    font-family: 'Segoe Script';
+    font-size: 1.9em;
+    text-align: center;
+    margin: 2% 0 2% 0;
+    padding: 1.3% 2% 1.3% 2%;
+    border: 2px solid #fff;
+    border-radius: 0.6em;
+    background-color: #361d1d;
+}
+
+.about_pr {
+    text-align: center;
+    font-size: 1.5em;
+    letter-spacing: 0.3em;
+    //  border: 2px solid #fff;
+}
+
+.quote {
+    width: 26%;
+    height: 100%;
+    font-family: Cambria;
+    font-style: italic;
+    font-size: 1.3em;
+    line-height: 1.25em;
+    box-sizing: border-box;
+    padding: 0.9em 0.4em 0.5em 0.5em;
+    //  border: 1px solid rgb(10, 139, 10);
+}
+
+//----------------------
+.content {
+    width: 100%;
+    height: 80%;
+    //  background: url("../img/grey_monitor1.png") 50% / 100% no-repeat;
+    background: url("../img/grey_monitor1.png") 50% 22% / 98% 100% no-repeat;
+    //   border: 2px solid rgb(48, 160, 145);
+}
+
+.wrap_content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-items: stretch;
+    height: 100%;
+    //  border: 2px solid green;
+}
+
+.left_content {
+    width: 18%;
+    margin-top: 2%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 2.0%;
+    //   border: 2px solid rgb(57, 13, 138);
+}
+
+.catalog {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    box-sizing: border-box;
+    //  border: 1px solid #afb9a9;
+    border-radius: 0.6em;
+    background-color: #afb9a9;
+    box-shadow: inset 0.1em 0.1em 0.6em 0.1em rgba($color: #000, $alpha: 0.8), inset -0.1em -0.1em 0.5em 0.1em rgba($color: #000, $alpha: 0.7);
+}
+
+.catalog h3 {
+    text-align: center;
+    font-size: 1.8em;
+    line-height: 1.0em;
+    box-sizing: border-box;
+    margin: 12% 4% 12% 4%;
+}
+
+.last_article {
+    color: black;
+}
+
+.last_article:hover {
+    color: blueviolet;
+}
+
+.catalog h2 {
+    font-size: 2.1em;
+    font-weight: 500;
+    line-height: 1em;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 15% 4% 12% 4%;
+    //  color: blueviolet;
+}
+
+.catalog_articles1 {
+    color: blueviolet;
+}
+
+.catalog_articles:hover {
+    color: blueviolet;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+    //  border: 2px solid #361d1d;
+}
+
+.logo-gh,
+.logo-fb {
+    width: 23%;
+    height: auto;
+}
+
+.pic_monitor {
+    //   position: relative;
+    width: 75%;
+    height: 88%;
+    box-sizing: border-box;
+    margin-top: 2%;
+    padding: 1.5%;
+    margin-right: 1.8%;
+    //  border: 2px solid rgb(57, 13, 138);
+    border-radius: 0.7em;
+    background-color: #afb9a9;
+    box-shadow: inset 0.1em 0.1em 0.6em 0.1em rgba($color: #000, $alpha: 0.8), inset -0.1em -0.1em 0.5em 0.1em rgba($color: #000, $alpha: 0.7);
+    overflow-y: scroll;
+}
+
+.article1-text h2 {
+    font-size: 1.8em;
+    margin: 0.5em;
+    font-weight: 600;
+}
+
+.article1-text p {
+    font-size: 1.6em;
+    margin: 0.5em;
+}
+
+
+/*
+.last_article_text {
+    position: absolute;
+    width: 40%;
+    top: 10%;
+    left: 7%;
+}
+*/
+
+.catalog-text {
+    position: absolute;
+    width: 40%;
+    top: 10%;
+    left: 7%;
+}
+
+.catalog-text h2 {
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+.catalog-text p {
+    font-size: 1.2em;
+    //  font-weight: 600;
+}
+
+.last_article_text a {
+    font-size: 1.5em;
+    color: #000;
+    margin: 1em;
+}
+
+.last_article_text a:hover {
+    color: blueviolet;
+}
+
+.last_article_text p {
+    font-size: 1.2em;
+    color: #000;
+    //   margin: 1em;
+    box-sizing: border-box;
+    padding: 0.5em 0.5em 0.5em 0em;
+}
+
+
+/*-----------------------------*/
+
+.footer {
+    position: relative;
+    width: 100%;
+    height: 17%;
+    //  border: 2px solid maroon;
+    background: url("../img/bgfooter1.png") 50% / 100% 100% no-repeat;
+}
+
+.footer_buttons {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    //  border: 2px solid red;
+}
+
+.footer_buttons a {
+    font-size: 1.2em;
+    font-weight: 600;
+    font-style: italic;
+    color: #000;
+}
+
+
+/*----------*/
+
+$btn-all: url("../img/btn_all.png") 50% / 100% 100% no-repeat;
+$btn-main: url("../img/btn_main.png") 50% / 100% 100% no-repeat;
+$marg-middle: 1.5%;
+$marg-outside: 0.4%;
+
+/*-----------*/
+
+@mixin btns($marg_top,
+$btn) {
+    //  border: 2px solid red;
+    margin-top: $marg_top;
+    padding: 1.5% 2.1% 1.7% 2.1%;
+    //  background: url("../img/btn_all.png") 50% / 100% 100% no-repeat;
+    background: $btn;
+    // border-radius: 0.5em;
+}
+
+
+/*---------------*/
+
+.git_but {
+    @include btns($marg-outside,
+    $btn-all);
+    // background: url("../img/btn_all.png") 50% / 100% 100% no-repeat;
+}
+
+.zen_but {
+    @include btns($marg-middle,
+    $btn-all);
+}
+
+.main_but {
+    @include btns(1.9%,
+    $btn-main);
+    padding: 2.2% 2.8% 2.4% 2.8%;
+}
+
+.main_but a {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.info_but {
+    @include btns($marg-middle,
+    $btn-all);
+}
+
+.contact_but {
+    @include btns($marg-outside,
+    $btn-all);
+}
+
+.copyright {
+    position: absolute;
+    right: 12.9%;
+    bottom: 7%;
+    font-size: 0.9em;
+}
+
+.copyright a {
+    color: #000;
+}
+
+.copyright a:hover {
+    color: brown;
+}
+
+@media only screen and (min-width: 730px) and (max-width: 940px) {
+    .name_site {
+        font-size: 1.5em;
+    }
+    .about_pr {
+        font-size: 1.1em;
+        letter-spacing: 0.4em;
+    }
+    .quote {
+        font-size: 1.0em;
+        line-height: 1.1em;
+        padding-top: 0.7em;
+    }
+    .catalog h3 {
+        font-size: 1.5em;
+    }
+    .catalog h2 {
+        font-size: 1.7em;
+        font-weight: 500;
+    }
+    .last_article_text a {
+        font-size: 1.3em;
+        margin: 0.8em;
+    }
+    .footer_buttons a {
+        font-size: 1.0em;
+        font-weight: 600;
+    }
+    .copyright {
+        bottom: 6%;
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 729px) {
+    .name_site {
+        font-size: 1.3em;
+    }
+    .about_pr {
+        font-size: 0.9em;
+        letter-spacing: 0.3em;
+    }
+    .quote {
+        font-size: 0.8em;
+        line-height: 0.9em;
+        padding-top: 0.7em;
+    }
+    .catalog h3 {
+        font-size: 1.2em;
+    }
+    .catalog h2 {
+        font-size: 1.4em;
+        font-weight: 500;
+    }
+    .last_article_text a {
+        font-size: 1.1em;
+        margin: 0.7em;
+        font-weight: 600;
+    }
+    .footer_buttons a {
+        font-size: 0.8em;
+        font-weight: 600;
+    }
+    .last_article_text p {
+        font-size: 1.0em;
+        padding: 0.5em 0.5em 0.5em 0em;
+    }
+    .copyright {
+        bottom: 6%;
+        font-size: 0.6em;
+    }
+}
+
+@media only screen and (max-width: 549px) {
+    .name_site {
+        font-size: 1.1em;
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid #fff;
+        background-color: #000;
+    }
+    .about_pr {
+        font-size: 0.6em;
+        letter-spacing: 0.3em;
+    }
+    .quote {
+        display: none;
+    }
+}
