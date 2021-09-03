@@ -1,0 +1,75 @@
+﻿@import '_zeroing_styles';
+//@import '_style_basic';
+// Style of the big pages
+//--------------------------------
+body {
+    width: 100vw;
+    height: 100vh;
+    //border: 2px solid #f00;
+    //background-color: rgb(149, 190, 238);
+}
+
+.header {
+    width: 100vw;
+    height: 12vh;
+    position: fixed;
+    top: 0vh;
+    left: 0vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+
+.article_title h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vh;
+    color: #fff;
+}
+
+.btn_switch {
+    width: 8vw;
+    height: 7vh;
+    position: fixed;
+    top: 4vh;
+    right: 3vw;
+    border: 2px solid #fff;
+}
+
+//------------------------
+.main {
+    //width: 98%;
+    //height: 77vh;
+    margin-top: 12.0vh;
+    //overflow-y: scroll;
+    overflow-y: hidden;
+    //border: 2px solid #0f0;
+}
+
+
+/*
+.articles_text {
+    overflow-y: hidden;
+}
+*/
+
+.articles_text p {
+    //margin-top: 2.5vh;
+    //margin-left: 1.2vw;
+    //margin-right: 1.2vw;
+    font-size: 3.5vh;
+    text-indent: 5vw;
+    line-height: 4vh;
+}
+
+.img_art {
+    width: 35vw;
+    height: auto;
+    float: left;
+    //margin-top: 2.5vh;
+    margin-left: 1.2vw;
+    margin-right: 1.2vw;
+    //margin: 2.0vh 2vw 2vh 1.5vw;
+    border: 2px solid #464646;
+    border-radius: 1.2em;
+}
