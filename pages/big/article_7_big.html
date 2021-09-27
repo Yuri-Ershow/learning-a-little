@@ -1,0 +1,282 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="description" content="Подробно описан процесс установки виртуальной среды и микрофреймворка Flask в ОС windows 7.">
+    <meta name="keywords" content="Программирование, Python, микрофреймворк, фреймворк, Flask, виртуалная среда">
+    <meta name="Author" content="Юрий Ершов">
+    <meta name="Copyright" content="Юрий Ершов">
+    <title>Учимся понемногу. Статья 7</title>
+
+    <link rel="stylesheet" href="../../css/style_articles_big.css">
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(85625353, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/85625353" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</head>
+
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="article_title">
+                <h1>7. Установка микрофреймворка Flask в ОС Windows 7</h1>
+            </div>
+            
+            <div class="wrapper_button">
+                <a href="../../pages/article_7.html">
+                    <div class="close"></div>
+                </a>
+            </div>
+          
+        </header>
+        <main class="main">
+            <div class="wrapper_main_content">
+                <div class="articles_text">
+
+                            <div class="img_art">
+                                <img src="../../img/img-articles/img_art_7/img_flask_1.jpg" alt="Картинка Flask">
+                            </div>
+                            <p>
+                               Flask, как известно, один из самых популярных фреймворков для языка Python в WEB-программировании. Конечно, лидер в этой сфере  - Django. Но он большой, тяжелый, перегружен различными возможностями, которые, возможно, и не понадобятся. К тому же на его серьезное изучение уйдет немало времени. Другое дело - "Скляночка" (Flask). Гибкий, быстрый, легко расширяемый и настраиваемый. Небольшие и средних размеров одностраничники, блоги, интернет магазины – все это вполне по силам для Flask. Кроме того, малый вес и полный контроль над приложением, а также и многие другие возможности, обеспечат ему популярность еще надолго. Поэтому, использовать фреймворк, конечно, имеет смысл. В изучении он достаточно прост, что также ему большой плюс. 
+                            </p>
+                            <p>
+                                И все же есть, на мой взгляд, у этого почтенного детища от Python, некоторые узкие места, которые требуют внимания. К одному из них я бы отнес вопрос, с которым приходится сталкиваться на самых первых шагах. Это установка фреймворка на Windows. Понятно, что подавляющее число серверов в сети работает под Linux. Вполне логично и рассматривать работу Flask именно в этой ОС. Но не всегда удобно использовать Linux при локальной разработке, да и далеко не все имеют и владеют Linux.
+                            </p>
+                            <p>
+                                Известно, что для работы приложения на локальном компьютере желательно создавать виртуальную среду. Она нужна по разным причинам. Наверное, самое главное то, что в этой среде устанавливаются локально различные используемые в приложении вспомогательные программы, в том числе и интерпретатор Python, которые не будут конфликтовать с какими-то, возможно, другими версиями этих программ, установленными на компьютере. Виртуальная среда также облегчает развертывание приложения на сервере.
+                            </p>
+                            <p>
+                                При первоначальном изучении вопроса, приходится буквально «продираться» через дебри написанного на эту тему в разных источниках. Из многочисленных рекомендаций по установке виртуальной среды, предоставляемых в них, не работает также немалое их количество. Есть, конечно, «святая святых» - Stack Overflow. Но иногда все же хочется, что называется, «докопаться» самому. Ну и грызешь...
+                            </p>
+                            <h2>Подготовительная работа</h2>
+                            <p>
+                                Python "любит" терминал. К нему и обратимся. В Windows, по умолчанию - это приложение cmd. Проще всего его вызвать комбинацией клавиш <span>"Win (клавиша с иконкой "окно") + R"</span>. Затем, в открывшемся окне, если оно будет пустым, набираем - cmd, нажимаем <span>"Enter"</span>, и мы в терминале (точнее, в его эмуляторе).
+                            </p>
+                            <p>
+                                По умолчанию он открывается в корневой папке пользователя. Например, 
+                            </p>
+                            
+                            <p><span>C:\Users\Grisha>cd ..\..</span></p>
+
+                            <p>
+                                где <span>..\..</span> - означает, что надо перейти на два уровня вверх.
+                            </p>
+                            <p>
+                                Или, если проще :
+                            </p>
+                            <p>
+                                <span>C:\Users\Grisha>cd с\</span>:
+                            </p>
+                            <p>
+                                Создаем рабочую папку My_flask. Во избежание возможных конфликтов, не стоит называть ее просто Flask. Или называем ее как душе угодно. Применим команду mkdir.
+                            </p>
+                            <p>
+                               <span>c:\>mkdir My_flask</span>
+                            </p>
+                            <p>
+                                Переходим в нее:
+                            </p>
+                            <p>
+                               <span>c:\>cd My_flask</span>
+                            </p>
+                            <p>
+                               В этой папке создадим папку своего первого проекта. Назовем ее, скажем, <span>first_flask_app</span>. 
+                            </p>
+                            <p>
+                               <span>c:\My_flask>mkdir first_flask_app</span>
+                            </p>
+                            <p>
+                               Переходим в нее:
+                            </p>
+                            <p>
+                               <span>c:\My_flask>cd first_flask_app</span>
+                            </p>
+                            <p>
+                               В результате в терминале имеем строку:
+                            </p>
+                            <p>
+                               <span>c:\My_flask\first_flask_app></span>
+                            </p>
+                            <!-- 
+                            <div class="img_code">
+                                <img src="../img/img-articles/img_art_6/img_mix_6.jpg" alt="">
+                            </div>
+                            -->
+                            <p>
+                               Теперь подготовительная работа выполнена, можно переходить к основной.                             
+                            </p>
+                            <h2>Создание виртуальной среды</h2>
+                            <p>
+                                В Windows 7 виртуальную среду удалось создать следующей командой:
+                            </p>
+                            <p>
+                                <span>c:\My_flask\first_flask_app>python -m venv my_flask_env</span>
+                            </p>
+                            <p>
+                                Теперь нужно ее активировать:
+                            </p>
+                            <p>
+                                <span>c:\My_flask\first_flask_app>my_flask_env\Scripts\activate</span>
+                            </p>
+                            <p>
+                                Получаем :
+                            </p>
+                            <p>
+                                <span>(my_flask_env) c:\My_flask\first_flask_app></span>
+                            </p>
+                            <p>
+                                Запись<span>(my_flask_env)</span>в начале строки, говорит  о том, что виртуальная среда успешно активирована.
+                            </p>
+                            <p>
+                                После активации виртуальной среды переходим в ее директорию:
+                            </p>
+                            <p>
+                                <span>(my_flask_env)c:\My_flask\first_flask_app>cd my_flask_env</span>
+                            </p>
+                            <p>
+                                В командной строке имеем:
+                            </p>
+                            <p>
+                                <span>(my_flask_env) c:\My_flask\first_flask_app\my_flask_env></span>                               
+                            </p>
+                            <p>
+                                Теперь все готово для установки в эту директорию фреймворка Flask. 
+                            </p>
+                            <h2>Установка фреймворка Flask</h2>
+                            <p>
+                                Используем традиционный установщик пакетов Python - pip:
+                            </p>
+                            <p>
+                                <span>(my_flask_env)c:\My_flask\first_flask_app\my_flask_env>pip install flask</span>
+                            </p> 
+                            <p>
+                                Если все прошло правильно, после ряда строк появится сообщение:
+                            </p>
+                            <p>
+                                <span>Installing collected packages: Werkzeug, itsdangerous, MarkupSafe, Jinja2, click, flask
+                                Successfully installed Jinja2-2.11.2 MarkupSafe-1.1.1 Werkzeug-1.0.1 click-7.1.2 flask-1.1.2 itsdangerous-1.1.0</span>
+
+                            </p>
+                            <p>
+                                Что говорит об успешной установке пакетов, составляющих базовый Flask.
+                            </p>
+                            <p>
+                                Иногда требуется обновить pip. 
+                            </p>
+                            <p>
+                                <span>You are using pip version 19.0.3, however version 20.2.2 is available.
+                                You should consider upgrading via the 'python -m pip install --upgrade pip' command.</span>
+
+                            </p>
+                            <p>
+                                Надо, так надо. Пишем:
+                            </p>
+                            <p>
+                                <span>(my_flask_env)c:\My_flask...\my_flask_env>python -m pip install --upgrade pip</span>
+                            </p>
+                            <p>
+                                Строка "Успешно установлен pip-20.2.2", показывает, что <span>pip</span> обновлен.
+                            </p>
+                            <p>
+                                <span>.............<br>
+                                Successfully installed pip-20.2.2</span>
+                            </p>
+                            <p>
+                                Все… После того, как пакеты установлены, можно чуть-чуть вздохнуть.
+                                Остается проверить, правильно ли установлены компоненты.
+                            </p>
+                            <p>
+                                Проверка установки виртуального Python. Набираем команду python:
+                            </p>
+                            <p>
+                                <span>(my_flask_env) c:\My_flask\...\my_flask_env>python</span>
+                            </p>
+                            <p>
+                                В результате должны получить примерно такие строки:
+                            </p>
+                            <p>
+                                <span>Python 3.8.3 (tags/v3.8.3:6f8c832, May 13 2020, 22:37:02) [MSC v.1924 64 bit (AMD64)] on win32
+                                Type "help", "copyright", "credits" or "license" for more information.
+                                >>></span>
+                            </p>
+                            <p>
+                                Они сообщают о версии Python - 3.8.3 … Остальное не существенно.
+                                Значки <span>>>></span> показывают, что мы перешли в интерпретатор Python. 
+                            </p>
+                            <p>
+                                Теперь можно проверить правильно ли установлен ли Flask. В командной строке пишем строку, чтобы загрузить фреймворк:
+                            </p>
+                            <p>
+                                <span>>>>import flask</span>
+                            </p>
+                            <p>
+                                Следующая строка запрашивает версию Flask. Обращаем внимание на ".". При этом пробелов нет.
+                            </p>
+                            <p>
+                                <span>>>> flask.__version__</span>
+                            </p>
+                            <p>
+                                Получаем номер версии:
+                            </p>
+                            <p>
+                                <span>'2.0.1'</span>
+                            </p>
+                            <p>
+                                Ну и рассеиваем последние сомнения:
+                            </p>
+                            <p>
+                                <span>>>>flask</span>
+                            </p>
+                            <p>
+                                Должны получить что-то вроде этого:
+                            </p>
+                            <p>
+                                <span>&#60module 'flask' from 'c:\\My_flask\\first_flask_app\\my_flask_env\\lib\\site-packages\\flask\\__init__.py'&#62</span>
+                            </p>
+                            <p>
+                                Если такая строка появилась, значит все успешно установлено и flask готов к работе.
+                                Далее открываем текстовый редактор и пишем в нем свое первое приложение <span>app.py</span>.
+                            </p>
+                            <p>
+                                Но это уже другая история...
+                            </p>
+                        </div>
+                        <div class="time">
+                            26.09.21
+                        </div>
+                 
+               
+                
+            </div>
+        </main>
+        <!--
+        <footer class="footer">
+            <div class="copyright">
+                <a href="#">&#169 copy Yuri-Ershow 2021</a>
+            </div>
+        </footer>
+        -->
+    </div>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
