@@ -10,140 +10,32 @@
     <meta name="keywords" content="Программирование, микрофреймворк, Flask, первое Flask-приложение, виртуальная среда">
     <meta name="Author" content="Юрий Ершов">
     <meta name="Copyright" content="Юрий Ершов">
-    <title>8. Создаем первое Flask-приложение.</title>
+    <title>Учимся понемногу. Статья 8</title>
 
-    <link rel="stylesheet" href="../css/style_articles.css">
-
-    <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-   ym(85625353, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/85625353" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+    <link rel="stylesheet" href="../../css/style_articles_big.css">
 
 </head>
 
 <body>
     <div class="page">
         <header class="header">
-            <div class="wrapper_header">
-                <div class="top_block">
-                    <div class="logo">
-                        <img src="../img/img-header/my_logo.png" class="img_logo" alt="Logo">
-                    </div>
-
-                    <div class="name_site">
-                        <p>Учимся понемногу</p>
-                    </div>
-                    <div class="quote">
-                        "Мы все учились понемногу, <br> Чему-нибудь..."
-                        <br>&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 А.С. Пушкин
-                    </div>
-
-                    <div class="wrapper_burger">
-                        <div id="burger">
-                            <span class="burger_line burger_line_first"></span>
-                            <span class="burger_line burger_line_second"></span>
-                            <span class="burger_line burger_line_third"></span>
-                            <span class="burger_line burger_line_fourth"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about_pr">
-                    Сайт о Web-программировании
-                </div>
+            <div class="article_title">
+                <h1>8. Создаем первое Flask-приложение.</h1>
             </div>
+            
+            <div class="wrapper_button">
+                <a href="../../pages/article_8.html">
+                    <div class="close"></div>
+                </a>
+            </div>
+          
         </header>
         <main class="main">
-            <div class="wrapper_main">
-                <nav class="nav">
-                    <div class="wrapper_nav">
+            <div class="wrapper_main_content">
+                <div class="articles_text">
 
-                        <div class="catalog">
-                            <h3><a href="#" class="last_article">Последняя<br> статья</a></h3>
-                            <h2><a href="catalog.html" class="catalog_articles">Каталог<br> статей</a></h2>
-                        </div>
-
-                        <div class="icons">
-                            <a class="logo-fb" href="https://www.facebook.com/profile.php?id=100042404500390">
-                                <img src="../img/img-nav/logo_fb.png"  alt="Logo Facebook">
-                            </a>
-                            <a class="logo-vk" href="https://vk.com/id559431739">
-                                <img src="../img/img-nav/logo_vk.png"  alt="Logo Vkontacte">
-                            </a>
-                        </div>
-
-                    </div>
-                </nav>
-                <div class="main_content">
-
-                    <div class="wrapper_menu_main">
-                        <div id="menu_main">
-                            <ul class="menu">
-                                <li class="item_menu">
-                                    <h2>Контакты</h2>
-                                </li>
-                                <li class="item_menu">
-                                    <div class="git_menu">
-                                        <a href="https://github.com/Yuri-Ershow">
-                                            GitHub
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="item_menu">
-                                    <div class="zen_menu">
-                                        <a href="https://zen.yandex.ru/id/5f48769bdca1b328cd7c262e">
-                                            Яндекс Дзен
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="item_menu">
-                                    <div class="vk_menu">
-                                        <a href="https://vk.com/id559431739">
-                                            В контакте
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="item_menu">
-                                    <div class="fb_menu">
-                                        <a href="https://vk.com/id559431739">
-                                            Facebook
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="item_menu">
-                                    <a href="about_author.html">Об авторе</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="wrapper_main_content">
-                        <div class="article_title">
-                            <h1>8. Создаем первое Flask-приложение.</h1>
-                        </div>
-
-                        <a href="big/article_8_big.html">
-                            <div class="wrapper_btn_big">
-
-                                <div class="btn_big">
-                                    <div class="btn_big_2"></div>
-                                </div>
-                            </div>
-                        </a>
-
-                        <div class="articles_text">
                             <div class="img_art">
-                                <img src="../img/img-articles/img_art_8/img_flask_2.jpg" alt="Картинка Flask">
+                                <img src="../../img/img-articles/img_art_8/img_flask_2.jpg" alt="Картинка Flask">
                             </div>
                             <p>
                                 После создания виртуальной среды и установки в ней фреймворка Flask (см. статью "Установка микрофреймворка Flask в ОС Windows") в папке виртуальной среды появятся папки и файлы, образующие структуру приложения. Рассмотрим их.
@@ -251,13 +143,13 @@
                              <p>
                                  Дальше - самое интересное - запускаем файл <span>app.py</span> стандартной командой - </span>python app.py</span>:
                              </p>
-                             <div class="code">                      
+                             <div class="code_1">                      
                                  <span>(my_flask_env)c:\My_flask\first_flask_app\my_flask_env>python app.py</span>
                              </div>
                              <p>
                                  В результате в терминале должны появиться строчки, среди которых:
                              </p>
-                             <div class="code">
+                             <div class="code_1">
                                  <span>* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)</span>
                              </div>
                              <p>
@@ -274,60 +166,18 @@
                              </h2>
                              <p>
                                  Ну и, …получаем удовольствие от свершенных трудов тяжких...
-                             </p>
-                            <!--
-                            <div class="img_code">
-                                <img src="../img/img-articles/img_art_6/img_mix_2.jpg" alt="">
-                            </div>                              
-                            -->
-                        </div>
-                        <div class="time">
-                            28.09.21
-                        </div>
+                             </p>                   
 
-                    </div>
+                </div>
+                <div class="time">
+                    28.09.21
                 </div>
             </div>
         </main>
-        <footer class="footer">
-            <div class="wrapper_footer">
-                <div class="git_but">
-                    <a href="https://github.com/Yuri-Ershow
-                    ">GitHub</a>
-                </div>
-
-                <div class="zen_but">
-                    <a href="https://zen.yandex.ru/id/5f48769bdca1b328cd7c262e
-                    ">Яндекс Дзен</a>
-                </div>
-
-                <div class="last_article_mob">
-                    <h3><a href="article_6.html">Последняя<br> статья</a></h3>
-                </div>
-
-                <div class="main_but">
-                    <a href="../index.html">На главную</a>
-                </div>
-
-                <div class="catalog_articles_mob">
-                    <h2><a href="catalog.html">Каталог<br> статей</a></h2>
-                </div>
-
-                <div class="info_but">
-                    <a href="about_author.html">Об авторе</a>
-                </div>
-
-                <div class="contact_but">
-                    <a href="contacts.html">Контакты</a>
-                </div>
-            </div>
-            <div class="copyright">
-                <a href="https://yuri-ershow.github.io/My-portfolio/index.html">&#169 copy Yuri-Ershow 2021</a>
-            </div>
-        </footer>
+        
     </div>
 
-    <script src="../js/main.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 
